@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #010218;
+}
+a{
+    text-decoration: none;
+    font-family: cool;
+    color: white;
+}
+@font-face {
+    font-family: cool;
+    src: url(./Mulish-Black.ttf);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: cool;
+}
+.head{
+    margin: -0.25rem;
+}
+.nothead{
+    margin: -0.25rem;
+}
+.submit-button{
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    background-color: #4b94ed;
+    font-family: cool;
+    font-size: medium;
+    font-weight: 300;
+    color: white;
+    border-style: none;
+    margin: 1rem;
+    transition: all 200ms ease;
+}
+.submit-button:hover{
+    box-shadow: 0 0 20px rgb(75, 148, 237, 0.5);
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="head">Succesfully  submitted answer!</h1>
+        <h1 class="nothead">Click here to go back.</h1>
+        <a href="/seequestions" class="submit-button">Press here</a>
+    </div>
+</body>
+</html>

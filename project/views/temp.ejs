@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Student</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <% if (myData.length > 0) { %>
+    <% myData.forEach(data => { %>
+      
+      <h1><%= data.username %></h1>
+      <h3><%= data.phno %></h3>
+      <h3><%= data.email %></h3>
+      <h3><%= data.age %></h3>
+      <br>
+      <br>
+
+    <% }) %>
+  <% } else { %>
+    <p>You didnt login : \</p>
+  <% } %>
+  
+</div>
+
+
+</body>
+</html>

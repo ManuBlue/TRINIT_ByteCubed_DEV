@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+  </head>
+  <body class="">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link rel="stylesheet" href="main.css" /> -->
+      </head>
+      <body>
+        <% myData.forEach(data => { %>
+        <nav class="w-full bg-[#040516] border-b-4 border-[#34eb6b]">
+          <div class="mx-9 py-3 flex items-center justify-between">
+            <div class="font-thin font-mullish text-white text-2xl">
+              Lingua <span class="font-bold">Connect</span>
+              <span class="text-gray-950 text-3xl">.</span>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300"
+                id="menu-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+              <%= data.username %>
+                <svg
+                  class="-mr-1 h-5 w-5 text-[#34eb6b]"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="dropdown-menu"
+                class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="/homepage"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Profile</a
+                  >
+                  <a
+                    href="/settings"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Settings</a
+                  >
+                  <a
+                    href="/help"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Help</a
+                  >
+                  <a
+                    href="/logout"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Sign Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="flex gap-3">
+          <section class="w-3/12 h-[100vh] bg-[#040516]">
+            <ul
+              class="space-y-2 font-medium pt- mx-9 py-4 flex flex-col items-start"
+            >
+              <li>
+                <a
+                  href="/broadcast"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white group"
+                >
+                  <button
+                    class="bg-[#34eb6b] shadow-cyan-500/50 text-white py-[14px] px-[18px] rounded-md font-mullish font-bold transition-all duration-200 n"
+                  >
+                    Start Stream
+                    <style>
+                      .n:hover {
+                        box-shadow: 0 0 50px rgb(52, 235, 107, 0.5);
+                      }
+                    </style>
+                  </button>
+                </a>
+              </li>
+              <li class="w-full">
+                <a
+                  href="schedule.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Schedule</span>
+                </a>
+              </li>
+              
+              <li class="w-full">
+                <a
+                  href="/seequestions_teacher"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Doubts and Assignments</span>
+                </a>
+              </li>
+              <li class="w-full">
+                <a
+                  href="/question_submit_teacher"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Give an assignment</span>
+                </a>
+              </li>
+              <li class="w-full">
+                <a
+                  href="/consumer"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Watch Stream</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <div class="w-full flex flex-col">
+            <div class="flex items-center mt-10 mx-auto gap-2">
+              <div
+                class="font-bold font-white font-mullish text-[40px] text-[#02042a]"
+              >
+                Welcome
+              </div>
+              <div class="font-bold text-[#02042a] font-mullish text-[40px]">
+                Back,
+              </div>
+              
+              <div class="font-mullish text-[#34eb6b] font-bold text-[40px]">
+                <%= data.username %>
+              </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.getElementById("menu-button");
+            const dropdownMenu = document.getElementById("dropdown-menu");
+
+            menuButton.addEventListener("click", function () {
+              const expanded =
+                menuButton.getAttribute("aria-expanded") === "true";
+              menuButton.setAttribute("aria-expanded", !expanded);
+              dropdownMenu.classList.toggle("hidden");
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener("click", function (event) {
+              if (
+                !dropdownMenu.contains(event.target) &&
+                event.target !== menuButton
+              ) {
+                dropdownMenu.classList.add("hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+              }
+            });
+          });
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+  </head>
+  <body class="">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link rel="stylesheet" href="main.css" /> -->
+      </head>
+      <body>
+        <nav class="w-full bg-[#010218] border-b-4 border-[rgb(44,225,165)]">
+          <div class="mx-9 py-3 flex items-center justify-between">
+            <div class="font-thin font-mullish text-white text-2xl">
+              Lingua <span class="font-bold">Connect</span>
+              <span class="text-gray-950 text-3xl">.</span>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300"
+                id="menu-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Menu
+                <svg
+                  class="-mr-1 h-5 w-5 text-[rgb(44,225,165)]"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="dropdown-menu"
+                class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="/homepage"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Profile</a
+                  >
+                  <a
+                    href="/settings"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Settings</a
+                  >
+                  <a
+                    href="/help"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Help</a
+                  >
+                  <a
+                    href="/logout"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    tabindex="-1"
+                    >Sign Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="flex gap-3">
+          <section class="w-3/12 h-[100vh] bg-[#010218]">
+            <ul
+              class="space-y-2 font-medium pt- mx-9 py-4 flex flex-col items-start"
+            >
+              <li>
+                <a
+                  href="/join_class"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white group"
+                >
+                  <button
+                    class="bg-[rgb(44,225,165)] shadow-cyan-500/50 text-white py-[14px] px-[18px] rounded-md font-mullish font-bold transition-all duration-200 n"
+                  >
+                    Join A Class
+                    <style>
+                      .n:hover {
+                        box-shadow: 0 0 50px rgba(42, 221, 234, 0.3);
+                      }
+                    </style>
+                  </button>
+                </a>
+              </li>
+
+              <li class="w-full">
+                <a
+                  href="/schedule"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Schedule</span>
+                </a>
+              </li>
+              <li class="w-full">
+                <a
+                  href="/my_students"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:bg-gray-700 group"
+                >
+                  <span class="ms-3">My Students</span>
+                </a>
+              </li>
+              <li class="w-full">
+                <a
+                  href="#"
+                  class="flex items-center p-2 rounded-lg text-white dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Assignments and Doubts</span>
+                </a>
+              </li>
+              <li class="w-full">
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Give an Assignment</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <div class="flex flex-col gap-2 w-full mx-auto">
+            <h1
+              class="mt-4 font-mullish font-bold text-[35px] text-[#010218] mx-auto"
+            >
+              My
+              <span class="text-[rgb(44,225,165)]">Students</span>
+            </h1>
+
+            <% if (myData.length > 0) { %>
+            <div class="hs-accordion-group w-full mt-9">
+              <% myData.forEach((data, index) => { %>
+              <div
+                class="hs-accordion active bg-white border -mt-px first:rounded-t-lg last:rounded-b-lg"
+                id="hs-bordered-heading-<%= index + 1 %>"
+              >
+                <button
+                  class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex items-center gap-x-3 w-full font-semibold text-start text-[#02042a] py-4 px-5 hover:text-[rgb(44,225,165)] disabled:opacity-50 disabled:pointer-events-none"
+                  aria-controls="hs-basic-bordered-collapse-<%= index + 1 %>"
+                >
+                  <svg
+                    class="hs-accordion-active:hidden block size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                  <svg
+                    class="hs-accordion-active:block hidden size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                  </svg>
+                  Student <%= index + 1 %>
+                </button>
+                <div
+                  id="hs-basic-bordered-collapse-<%= index + 1 %>"
+                  class="hs-accordion-content w-full overflow-hidden hidden transition-[height] duration-300"
+                  aria-labelledby="hs-bordered-heading-<%= index + 1 %>"
+                >
+                  <div class="pb-4 px-5">
+                    <p class="text-gray-800 flex flex-col items-start">
+                      <em class="font-mullish"
+                        >Question : <%= data.mydoubt %></em
+                      >
+                      <em>From : <%= data.from %></em>
+                      <em>To : <%= data.to %></em>
+                      <em>Answer : <%= data.answer %></em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else { %>
+            <p>There are no Students to display...</p>
+            <% } %>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.getElementById("menu-button");
+            const dropdownMenu = document.getElementById("dropdown-menu");
+
+            menuButton.addEventListener("click", function () {
+              const expanded =
+                menuButton.getAttribute("aria-expanded") === "true";
+              menuButton.setAttribute("aria-expanded", !expanded);
+              dropdownMenu.classList.toggle("hidden");
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener("click", function (event) {
+              if (
+                !dropdownMenu.contains(event.target) &&
+                event.target !== menuButton
+              ) {
+                dropdownMenu.classList.add("hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+              }
+            });
+          });
+        </script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var accordionToggles = document.querySelectorAll(
+              ".hs-accordion-toggle"
+            );
+
+            accordionToggles.forEach(function (toggle) {
+              toggle.addEventListener("click", function () {
+                var accordionContent = toggle.nextElementSibling;
+                accordionContent.classList.toggle("hidden");
+                toggle.classList.toggle("hs-accordion-active");
+                var arrowIcon = toggle.querySelector(".size-4");
+                arrowIcon.classList.toggle("hs-accordion-active");
+              });
+            });
+          });
+        </script>
+        <script>
+          (function () {
+            window.addEventListener("load", () => {
+              // Textarea auto height
+              const textareas = ["#hs-textarea-ex-1"];
+
+              textareas.forEach((el) => {
+                const textarea = document.querySelector(el);
+
+                textareaAutoHeight(textarea, 3);
+
+                textarea.addEventListener("input", () => {
+                  textareaAutoHeight(textarea, 3);
+                });
+              });
+
+              function textareaAutoHeight(el, offsetTop = 0) {
+                el.style.height = "auto";
+                el.style.height = `${el.scrollHeight + offsetTop}px`;
+              }
+            });
+          })();
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
