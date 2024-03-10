@@ -42,7 +42,7 @@ Features :
 
 5.Can hire teachers as a student.
 
-6.Can sort out teachers as a student.
+6.Can sort out teachers as a student based on qualification, language...etc
 
 7.Website is entirely routed to simplify using it.
 
