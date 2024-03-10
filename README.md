@@ -3,6 +3,7 @@ Lingua Connect Web developement project
 
 
 Navigation : 
+
 1.Backups are placed in same directory as this readme file.
 
 2.Project is placed in the project folder.
@@ -10,6 +11,7 @@ Navigation :
 3.Models folder contains models for mongoDB.
 
 4.All static files places in Views folder.
+
 
 
 
