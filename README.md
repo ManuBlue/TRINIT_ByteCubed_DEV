@@ -27,7 +27,7 @@ How to run :
 
 5.Go to localhost:3000 to access site.
 
-
+6. See google drive video for further reference.
 
 
 Features : 
