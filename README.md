@@ -12,5 +12,8 @@ How to run :
 Download latest backup or project folder
 Extract the files (If downloaded backup)
 Install npm dependencies (run npm install on terminal)
-Run index.js using node (Run node index on terminal)
+Run index.js using node (Run nodemon index on terminal)
 Go to localhost:3000 to access site
+
+Google drive link (For videos) : 
+https://drive.google.com/drive/folders/1Fy5bNIPqs4sBEk7udqGU4zTrEYEF5M7w?usp=sharing
