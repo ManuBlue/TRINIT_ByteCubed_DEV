@@ -14,6 +14,7 @@ Navigation :
 
 
 How to run :
+
 1.Download latest backup or project folder.
 
 2.Extract the files (If downloaded backup).
@@ -28,6 +29,7 @@ How to run :
 
 
 Features : 
+
 1.Able to register and login as a student or teacher.
 
 2.Able to submit dobts(Student)/assignnments(Teacher) publicly(To everyone using site) or privately (To particular student/teacher)
@@ -47,4 +49,5 @@ Features :
 
 
 Google drive link (For videos) : 
+
 https://drive.google.com/drive/folders/1Fy5bNIPqs4sBEk7udqGU4zTrEYEF5M7w?usp=sharing
